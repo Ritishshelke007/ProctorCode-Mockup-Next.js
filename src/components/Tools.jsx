@@ -90,7 +90,7 @@ export default function Tools() {
   return (
     <div className="[perspective:1000px] relative b flex flex-col mx-auto w-full  items-center justify-start mb-30 ">
       <h1 className="md:mt-0 text-4xl md:text-4xl max-w-lg text-center font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-        Empower Educators with ProctorCode's Faculty Tools
+        Empower Educators with ProctorCode Faculty Tools
       </h1>
       <Tabs tabs={tabs} />
     </div>
