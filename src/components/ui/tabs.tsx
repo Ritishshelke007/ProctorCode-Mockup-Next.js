@@ -37,10 +37,10 @@ export const Tabs = ({
   const [hovering, setHovering] = useState(false);
 
   return (
-    <>
+    <div className="grid grid-cols-3 items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full h-[40rem]">
       <div
         className={cn(
-          "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+          "flex flex-col items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
           containerClassName
         )}
       >
@@ -74,14 +74,16 @@ export const Tabs = ({
           </button>
         ))}
       </div>
-      <FadeInDiv
-        tabs={tabs}
-        active={active}
-        key={active.value}
-        hovering={hovering}
-        className={cn("mt-16", contentClassName)}
-      />
-    </>
+      <div className="col-span-2 h-[35rem] pr-5">
+        <FadeInDiv
+          tabs={tabs}
+          active={active}
+          key={active.value}
+          hovering={hovering}
+          className={cn("mt-4", contentClassName)}
+        />
+      </div>
+    </div>
   );
 };
 

@@ -3,6 +3,11 @@
 import Image from "next/image";
 import { Tabs } from "./ui/tabs";
 import dashboard from "../app/dashboard.png";
+import monitor from "../app/assets/monitor.png";
+import course from "../app/assets/courses.png";
+import exam from "../app/assets/createexam.png";
+import addcourse from "../app/assets/addcourse.png";
+import submission from "../app/assets/submission.png";
 
 export default function Tools() {
   const tabs = [
@@ -11,7 +16,7 @@ export default function Tools() {
       value: "dashboard",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Faculty Dashboard</p>
+          <p className="text-2xl">Faculty Dashboard</p>
           <DummyContent />
         </div>
       ),
@@ -21,8 +26,30 @@ export default function Tools() {
       value: "monitor",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Monitor Student Activities</p>
-          <DummyContent />
+          <p className="text-2xl">Monitor Student Activities</p>
+          <Image
+            src={monitor}
+            alt="dummy image"
+            width="1000"
+            height="1000"
+            className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+          />
+        </div>
+      ),
+    },
+    {
+      title: "View Submission",
+      value: "submission",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+          <p className="text-2xl">View Student Submission</p>
+          <Image
+            src={submission}
+            alt="dummy image"
+            width="1000"
+            height="1000"
+            className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+          />
         </div>
       ),
     },
@@ -31,8 +58,14 @@ export default function Tools() {
       value: "course",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Add Course</p>
-          <DummyContent />
+          <p className="text-2xl">Add Course</p>
+          <Image
+            src={addcourse}
+            alt="dummy image"
+            width="1000"
+            height="1000"
+            className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+          />
         </div>
       ),
     },
@@ -41,27 +74,22 @@ export default function Tools() {
       value: "exam",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Create a new exam</p>
-          <DummyContent />
-        </div>
-      ),
-    },
-
-    {
-      title: "Profile",
-      value: "profile",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Profile tab</p>
-          <DummyContent />
+          <p className="text-2xl">Create a new exam</p>
+          <Image
+            src={exam}
+            alt="dummy image"
+            width="1000"
+            height="1000"
+            className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+          />
         </div>
       ),
     },
   ];
 
   return (
-    <div className="h-[20rem] md:h-[44rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-center justify-start my-40">
-      <h1 className="md:mt-0 text-4xl md:text-4xl max-w-lg text-center my-5 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+    <div className="[perspective:1000px] relative b flex flex-col mx-auto w-full  items-center justify-start mb-30 ">
+      <h1 className="md:mt-0 text-4xl md:text-4xl max-w-lg text-center font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
         Empower Educators with ProctorCode's Faculty Tools
       </h1>
       <Tabs tabs={tabs} />
